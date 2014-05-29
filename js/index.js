@@ -16,11 +16,25 @@ index = {
 					});
 				}
 			})
-			index.ui.resizePic(); 		
+			index.ui.resizePic(); 	
+			index.ui.repositionPic(); 	
 		},
 		resizePic : function(){
 			var compareHeight = $("#main").height();
-			$("#profilePic").css()
+			var newHeight = compareHeight * 0.6;
+			$("#profilePic").css({
+				"height": newHeight,
+				"margin-top" : -1 * (newHeight / 2),
+			});
+		},
+		repositionPic : function(){
+			var leftPosition = $("#welcome").position().left/2;
+			var marginLeft = -1 * ($("#profilePic").width()/2)
+			$("#main_pic").css({
+				"left" : leftPosition,
+				"margin-left" : marginLeft
+			})
+			
 		},
 	},
 	ctl : {
