@@ -34,6 +34,8 @@ index = {
 				"left" : leftPosition,
 				"margin-left" : marginLeft
 			})
+		},
+		resizeDivs : function(){
 			
 		},
 	},

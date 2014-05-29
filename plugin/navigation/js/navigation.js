@@ -19,7 +19,7 @@ var navigation  = {
 		appendHTML : function(){
 			$('<div id="name">Brandon Yee</div>').appendTo("header");
 			$("<div></div>").attr("id", "navigation").appendTo("header");
-			var links = '<div id="home" data-href="1" class="current">Home</div>';
+			var links = '<div id="home" data-href="1" class="current" style="color:#94B0F4">Home</div>';
 			links += '<div id="about_l" data-href="2">About Me</div>';
 			links += '<div id="folio_l" data-href="3">Portfolio</div>';
 			links += '<div id="contact_l" data-href="4">Contact Me</div>';
