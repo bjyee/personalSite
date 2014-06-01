@@ -29,8 +29,10 @@ index = {
 		},
 		repositionPic : function(){
 			var leftPosition = $("#welcome").position().left/2;
-			var marginLeft = -1 * ($("#profilePic").width()/2)
+			var marginLeft = -1 * ($("#profilePic").width()/2);
+			var topPosition = ($("#main_pic").parent().height()/2) + 50 + "px";
 			$("#main_pic").css({
+				"top" : topPosition,
 				"left" : leftPosition,
 				"margin-left" : marginLeft
 			})
