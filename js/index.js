@@ -52,9 +52,20 @@ index = {
 				index.ui.resizeDiv(h);
 			}
 		},
+		
+		loadDetails : function(sectionName){
+			var url = sectionName + ".html";
+		},
+		
 		bindEvents : function(){
 			$(window).resize(function(){
 				index.ctl.checkMin();
+			})
+			$("#frontPage").on("click", function(e){
+				var target = $(e.target);
+				if(target.attr("class").indexOf("showDetail") != -1){
+					index.ctl.loadDetails(target.attr("data-content"));
+				}
 			})
 		}
 	
@@ -64,4 +75,5 @@ index = {
 $(function(){
 	  index.ctl.checkMin();
 	  index.ctl.bindEvents();
+// 	  need to check what browser and what version they are using.
 });
